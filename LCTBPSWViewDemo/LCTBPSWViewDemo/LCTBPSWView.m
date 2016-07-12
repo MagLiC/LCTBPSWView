@@ -8,7 +8,7 @@
 
 #import "LCTBPSWView.h"
 
-@interface LCTBPSWView ()<UITextFieldDelegate>
+@interface LCTBPSWView ()
 
 @property (nonatomic, strong)NSMutableArray *labelMArr;
 
@@ -24,7 +24,6 @@
         _numTextField = [[UITextField alloc]initWithFrame:self.bounds];
         _numTextField.keyboardType = UIKeyboardTypeNumberPad;
         [_numTextField addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
-        _numTextField.delegate = self;
     }
     return _numTextField;
 }
